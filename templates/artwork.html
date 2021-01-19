@@ -1,0 +1,124 @@
+{% extends "base.html" %} 
+
+{% block title %}C. E. Giugno, Artwork{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .artwork {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        color:  rgb(117, 139, 161) !important;
+    }
+    .thumbnail {
+        border: rgb(117, 139, 161);
+        border-radius: 5px;
+    }
+    .thumbnail:hover , .thumbnail:focus{
+        box-shadow: 5px 0px 50px  rgb(117, 139, 161);;
+    }
+    .thumbnail p {
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:  rgb(117, 139, 161) !important;
+        margin-top: 8px;
+    }
+    .link , .link:hover, .link:focus{
+        text-decoration: none;
+    }
+    .thumbnail a img { 
+        width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<h2 class="artwork">Artwork</h2>
+<div class="container">
+    <div class="row text-align: center display:inline">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/grandmother_portrait.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/grandmother_portrait.jpg') }}" alt="Portrait of My Grandmother">
+                    <p><strong>Portrait of My Grandmother.</strong></p>
+                    <p>Digital Media</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/mom_portrait.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/mom_portrait.jpg') }}" alt = "Portrait of Mother">
+                    <p><strong>Portrait of Mother.</strong></p>
+                    <p>Digital Media.</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/oilpastel.JPG') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/oilpastel.JPG') }}" alt = "Fleeting Reflection.">
+                    <p><strong>Fleeting Reflection.</strong></p>
+                    <p>Oil Pastel.</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/stilllife.JPG') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/stilllife.JPG') }}" alt = "Still Life.">
+                    <p><strong>Still Life.</strong></p>
+                    <p>Charcoal.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/loki.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/loki.jpg') }}" alt="Indiscernible Gaze">
+                    <p><strong>Indiscernible Gaze.</strong></p>
+                    <p>Loki, Marvel. Ink and Digital Media.</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/max_with_rose.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/max_with_rose.jpg') }}" alt = "Magician and Gentleman.">
+                    <p><strong>Magician and Gentleman.</strong></p>
+                    <p>Maxwell, <i>Don't Starve.</i> Digital Media.</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/sabrina_fullbody.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/sabrina_fullbody.jpg') }}" alt = "Sabrina, Full Body.">
+                    <p><strong>Go With the Flow.</strong></p>
+                    <p>Sabrina, <i>Pokemon</i>. Digital Media</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/wilson_portrait.png') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/wilson_portrait.png') }}" alt = "Wilson, Portrait.">
+                    <p><strong>Seeing Shadows.</strong></p>
+                    <p>Wilson, <i>Don't Starve</i>. Digital Media.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/max_tableau.png') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/max_tableau.png') }}" alt = "Staring into the Void">
+                    <p><strong>Staring into the Void.</strong></p>
+                    <p>Maxwell, <i>Don't Starve.</i> Digital Media.</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/nonna_portrait.jpg') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/nonna_portrait.jpg') }}" alt = "Portrait of Nonna (Grandmother in Italian)">
+                    <p><strong>Portrait of Nonna (Grandmother in Italian).</strong></p>
+                    <p>Digital Media.</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="link" href="{{ url_for('static', filename='img/portfolio/sabrina_portrait.JPG') }}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/portfolio/sabrina_portrait.JPG') }}" alt = "Sabrina, Portrait.">
+                    <p><strong>I Already Know.</strong></p>
+                    <p>Sabrina, <i>Pokemon</i>. Digital Media.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

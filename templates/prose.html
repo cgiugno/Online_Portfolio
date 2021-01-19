@@ -1,0 +1,94 @@
+{% extends "base.html" %} 
+
+{% block title %}C. E. Giugno, Prose{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .prose {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        color:  rgb(117, 139, 161) !important;
+    }
+    .desc {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+    }
+    .link , .link:hover, .link:focus{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        text-decoration: none;
+    }
+    .col-sm-4 {
+        padding: 1%;
+    }
+    .panel {
+        height: 150px;
+        padding: 5%;
+        background-image: radial-gradient( rgb(84, 101, 119), rgb(117, 139, 161));
+    }
+    .panel:hover {
+        box-shadow: 5px 0px 40px  rgb(117, 139, 161);
+    }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="container">
+    <h2 class="prose">Prose</h2>
+    <div class="row text-center">
+    <div class="col-sm-4">
+        <div class="panel">
+            <a class="link" href="{{ url_for('static', filename='pdf/ActualEnlightenment.pdf') }}" target="_blank">
+                <h4>Actual Enlightenment</h4>
+                <p class = "desc">A teenager realizes enlightenment might not be all its cracked up to be.</p>
+            </a>
+        </div>
+    </div>
+    
+    <div class="col-sm-4">
+        <div class="panel">
+            <a class="link" href="{{ url_for('static', filename='pdf/DiamondDogs.pdf') }}" target="_blank">
+                <h4>Diamond Dogs</h4>
+                <p class="desc">"Halloween Jack is a real cool cat/And he lives on top of Manhatten Chase." - Diamond Dogs, David Bowie</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel">
+            <a class="link" href="{{ url_for('static', filename='pdf/LovingTheTornado.pdf') }}" target="_blank">
+                <h4>Loving The Tornado</h4>
+                <p class = "desc">Two teenagers, one living, one dead, are forced to reckon with the history they share.</p>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="row text-center">
+    <div class="col-sm-4">
+        <div class="panel">
+            <a class="link" href="{{ url_for('static', filename='pdf/TheGoblinQueen.pdf') }}" target="_blank">
+                <h4>The Goblin Queen</h4>
+                <p class = "desc">The world is not what it seems. And neither is she.</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel">
+            <a class="link" href="{{ url_for('static', filename='pdf/WatchingAliens.pdf') }}" target="_blank">
+                <h4>Watching Aliens</h4>
+                <p class = "desc">A young boy makes an important choice about who he is--and who he will be.</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel">
+            <a class="link" href="https://www.amazon.com/Building-Character-Authors-Create-Characters-ebook/dp/B08T5G5Q2N/ref=sr_1_1?crid=1HF35DN9WV1KA&dchild=1&keywords=building+character&qid=1610670298&refinements=p_n_date%3A1249100011&rnid=1249099011&s=digital-text&sprefix=building+ch%2Caps%2C197&sr=1-1" target="_blank">
+                <h4><i>Building Character</i></h4>
+                <p class = "desc"><i>Building Character</i> examines why stories are such a powerful tool, why characters are (kind of) real and how to bring your own fictional people to life.</p>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

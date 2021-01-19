@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+
+{% block title %}
+About C. E. Giugno
+{% endblock %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .about-title {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+        color:white;
+    }
+    .about-desc {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+        color:  white;
+    }
+    .col-sm-8 {
+        padding-top: 2%;
+    }
+    body {
+        background-color:  rgb(117, 139, 161);
+    }
+    #about-background {
+        margin-top: 3%;
+    }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="container-fluid" id="about-background">
+    <div class="col-sm-10 text-left">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8">
+            <h3 class="about-title">Catherine Giugno</h3>
+            <p class="about-desc">Catherine Giugno is well aware that her majors: English and Computer science are about as similar as Jigglypuff and Bagon. But like both of the little Pokemon creatures, they have one connection: video games. Ever since she first set eyes on a console in 2007, she fell in love with the immersive worlds and complex characters that could somehow inhabit something as two dimensional as a screen.
+                Since then--and diving into the universes of Pokemon, Marvel Strike Force, Fire Emblem, Don't Starve, and Overwatch--she's channeled that fascination into her own writing, creating stories about both the worlds she's loved and those of her own.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="{{ url_for('static', filename='img/portrait.jpg') }}" class = "img-responsive img-circle margin" style="display:inline" alt="Self-Portrait" width="90%">
+        </div>
+    </div>
+</div>
+{% endblock %}
